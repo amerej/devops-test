@@ -31,7 +31,7 @@ export default {
         const seenIndexes = await axios({url: '/api/values/all', method: 'GET'})
         this.seenIndexes = seenIndexes.data
       } catch (e) {
-        console.log(e)
+        // eheh
       }
     },
     async submit() {
