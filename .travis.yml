@@ -6,7 +6,7 @@ before_install:
   - docker build -t amerej/devops-test-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run amerej/devops-test-test yarn test -- --coverage
+  - docker run amerej/devops-test-test yarn run test:unit -- --coverage
 
 after_success:
   - docker build -t amerej/devops-test-client ./client
