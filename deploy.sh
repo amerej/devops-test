@@ -11,4 +11,4 @@ docker push amerej/devops-test-server:$SHA
 
 kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=amerej/devops-test-server:$SHA
-kubectl set image deployments/client-deployment server=amerej/devops-test-client:$SHA
+kubectl set image deployments/client-deployment client=amerej/devops-test-client:$SHA
