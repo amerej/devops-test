@@ -36,7 +36,11 @@ export default {
     },
     async submit() {
       const { index } = this
-      await axios({url: '/api/values', data: { index }, method: 'POST'})
+      try {
+        await axios({url: '/api/values', data: { index }, method: 'POST'})
+      } catch (e) {
+        // ohoh network error on firefox without try/catch !
+      }
       this.index = null
     }
   }
